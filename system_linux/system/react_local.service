@@ -1,0 +1,8 @@
+[Unit]
+Description=React website gurkamal
+
+[Service]
+ExecStart=/usr/bin/serve /home/maninder/website_del_me/build/build
+
+[Install]
+WantedBy=multi-user.target

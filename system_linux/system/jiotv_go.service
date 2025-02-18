@@ -1,0 +1,17 @@
+[Unit]
+Description=JioTV Go Client Daemon
+After=network-online.target
+
+[Service]
+Type=simple
+UMask=007
+
+ExecStart=/home/maninder/.jiotv_go/bin/jiotv_go serve -P
+
+Restart=on-failure
+
+# Time to wait before forcefully stopped.
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
